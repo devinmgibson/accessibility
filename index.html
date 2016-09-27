@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Accessibility Forms</title>
@@ -7,37 +7,38 @@
   </head>
   <body>
     <ul class="navigation">
-      <li><a href="./index.html">Form</a></li>
-      <li><a href="./alt_text.html">Alt-Text</a></li>
-      <li><a href="./contrast.html">Contrast</a></li>
-      <li><a href="./headings.html">Headings</a></li>
-      <li><a href="./tables.html">Tables</a></li>
+      <li><a href="./index.html" tabindex="1">Form</a></li>
+      <li><a href="./alt_text.html" tabindex="2">Alt-Text</a></li>
+      <li><a href="./contrast.html" tabindex="3">Contrast</a></li>
+      <li><a href="./headings.html" tabindex="4">Headings</a></li>
+      <li><a href="./tables.html" tabindex="5">Tables</a></li>
     </ul>
     <div class="content">
       <h1>Application form</h1>
 
       <form action="" method="post" name="form1" id="form1">
-      <p>1. Personal Details</p>
-      <p>Name:
-      <input type="text" id="textfield"></p>
+      <fieldset>
+      <legend>1. Personal Details</legend>
+      <p><label for="textfield">Name:</label>
+      <input type="text" tabindex="6" id="textfield"></p>
 
-      <p>Phone Number:
-      <input type="text" id="textfield3"></p>
+      <p><label for="textfield2">Phone Number:</label>
+      <input type="text" tabindex="7" id="textfield2"></p>
 
-      <p>Date of Birth:
-      <input type="text" tabindex="-1" id="textfield2"></p>
+      <p><label for="textfield3">Date of Birth:</label>
+      <input type="text" tabindex="8" id="textfield3"></p>
 
-      <p><label for="textfield4">First Name:
-      <input type="text" id="textfield4"></p>
+      <p><label for="textfield4">First Name:</label>
+      <input type="text" tabindex="9" id="textfield4"></p>
 
-      <p>Last Name:
-      <input type="text" tabindex="4" id="textfield5"></p>
+      <p><label for="textfield5">Last Name:</label>
+      <input type="text" tabindex="10" id="textfield5"></p>
 
       <p><label for="address">Address:</label>
-      <input type="text"></p>
+      <input type="text" tabindex="11" id="address"></p>
 
-      <p>State:
-       <select id="state">
+      <label for="state">State:</label>
+       <select tabindex="12" id="state">
         <option value="0">Select</option>
         <option value="Arizona">Arizona</option>
         <option value="California">California</option>
@@ -49,27 +50,29 @@
         <option value="Wyoming">Wyoming</option>
       </select>
       </p>
-
+      </fieldset>
       <fieldset>
       <legend>2. Emergency Contact</legend>
-      <p>Name:
-      <input type="text" id="textfield13"></p>
+      <p><label for="textfield13">Name:</label>
+      <input type="text" tabindex="13" id="textfield13"></p>
 
-      <p>Address:
-      <input type="text" id="textfield14"></p>
+      <p><label for="textfield14">Address:</label>
+      <input type="text" tabindex="14" id="textfield14"></p>
 
-      <p>State
-      <input type="text" id="textfield15"></p>
+      <p><label for="textfield15">State</label>
+      <input type="text" tabindex="15" id="textfield15"></p>
 
-      <p>Telephone:
-      <input type="text" id="textfield16"></p>
+      <p><label for="textfield16">Telephone:</label>
+      <input type="text" tabindex="16" id="textfield16"></p>
       </fieldset>
 
-      <p>3. Citizenship</p>
-      <p><input type="radio">United States</p>
-      <p><input type="radio">Canada</p>
+      <fieldset>
+      <legend>3. Citizenship</legend>
+      <p><label for="US"><input type="radio" tabindex="17" id="US" name="citizenship">United States</p></label>
+      <p><label for="CAN"><input type="radio" tabindex="18" id="CAN" name="citizenship">Canada</p></label>
+      </fieldset>
+      <p><input type="submit" value="Submit" tabindex="19" id="button" name="button"></p>
 
-      <p><input type="submit" value="Submit" id="button" name="button"></p>
       </form>
     </div>
   </body>
